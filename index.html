@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haothunder - 个人主页</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .qr-hover {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transform: translateX(-50%);
+            left: 50%;
+            width: max-content;
+        }
+        .wechat-container:hover .qr-hover {
+            opacity: 1;
+            visibility: visible;
+        }
+        .qr-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .qr-container {
+            width: 400px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <div class="min-h-screen flex flex-col">
+        <main class="flex-grow container mx-auto px-4 py-16 max-w-4xl">
+            <!-- Header -->
+            <header class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-light text-gray-800 mb-4">Haothunder</h1>
+                <p class="text-xl md:text-2xl text-gray-600 font-light">AI技术学习者</p>
+                <p class="text-lg text-gray-500 mt-4 italic">"苟且地追求诗和远方"</p>
+            </header>
+
+            <!-- About Section -->
+            <section class="mb-16">
+                <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+                    <h2 class="text-2xl font-light text-gray-800 mb-6">关于我</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        我是Haothunder(清秋)，一位热衷于AI技术的学习者。
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="mb-16">
+                <div class="bg-white rounded-lg shadow-sm p-8">
+                    <h2 class="text-2xl font-light text-gray-800 mb-6">联系方式</h2>
+                    <div class="wechat-container relative inline-block">
+                        <div class="flex items-center space-x-4 text-gray-600 cursor-pointer">
+                            <span class="material-icons">qr_code</span>
+                            <span>微信：Haothunder</span>
+                        </div>
+                        <div class="qr-hover absolute top-8 mt-2">
+                            <div class="qr-container">
+                                <img src="wechat-qr.jpg" alt="微信二维码" class="qr-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-100 py-8">
+            <div class="container mx-auto px-4 text-center text-gray-500">
+                <p>&copy; 2024 Haothunder. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 
